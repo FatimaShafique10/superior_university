@@ -1,0 +1,31 @@
+body {
+    background-color: #eef;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type=number], input[type=submit] {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+input[type=submit] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #0056b3;
+}

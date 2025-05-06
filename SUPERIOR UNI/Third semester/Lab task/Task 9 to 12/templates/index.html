@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Approval Predictor</h1>
+        <form method="POST" action="/predict">
+            <label>Credit Score:</label>
+            <input type="number" name="0" required><br>
+
+            <label>Loan Amount:</label>
+            <input type="number" name="1" required><br>
+
+            <label>DTI Ratio:</label>
+            <input type="number" name="2" required><br>
+
+            <label>Employment Status (Encoded as 0, 1, 2, ...):</label>
+            <input type="number" name="3" required><br>
+
+            <label>Approval Status (For Training Only):</label>
+            <input type="number" name="4" placeholder="0 or 1" required><br>
+
+            <input type="submit" value="Predict">
+        </form>
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
